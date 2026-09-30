@@ -3,7 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: default-trainee-role
   namespace: default
-spec:
+rules:
 - apiGroup: [''] # indicates that core v1 api group
   resources: ['*'] # all objects pod, rs,dep.svc, ingress
   verbs: ['get','watch','list']
@@ -14,8 +14,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: default-trainee-rb
   namespace: default
-spec:
-- user: shubhashini
-  role: default-trainee-role
-  roleBinding: rbac.authorization.k8s.io/v1
-
+subjects:
+- kind: name
+  name: shubhashini
+  apiGroup: rbac.authorization.k8s.io/v1
+roleRef:
+  kind: role
+  name: default-trainee-role
+  apiGroup: rbac.authorization.k8s.io/v1
