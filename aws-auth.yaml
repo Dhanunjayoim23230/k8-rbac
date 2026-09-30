@@ -9,10 +9,10 @@ data:
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-  - groups:
-    - default-trainee-role
-    userarn: arn:aws:iam::753369745113:user/shubhashini
-    username: shubhashini
+    - groups:
+      - default-trainee-role
+      userarn: arn:aws:iam::753369745113:user/shubhashini
+      username: shubhashini
 kind: ConfigMap
 metadata:
   creationTimestamp: "2026-09-30T01:53:01Z"
