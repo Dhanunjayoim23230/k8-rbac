@@ -29,7 +29,7 @@ metadata:
   name: default-trainee-cr
   namespace: default
 rules:
-- apiGroup: [""] #empty means core api group v1
+- apiGroups: [""] #empty means core api group v1
   resources: ["*"] #all resources aceess allowed
   verbs: ["get","watch","list","describe"]
 
