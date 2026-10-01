@@ -41,7 +41,7 @@ metadata:
   namespace: default
 subjects:
 - kind: User
-  name: Shibhashini
+  name: shubhashini
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
