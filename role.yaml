@@ -4,7 +4,7 @@ metadata:
   name: default-trainee-role
   namespace: default
 rules:
-- apiGroups: ["aaps/v1"] # indicates that core v1 api group
+- apiGroups: ["apps/v1"] # indicates that core v1 api group
   resources: ["deployments"] # all objects pod, rs,dep.svc, ingress
   verbs: ["get", "watch", "list", "describe"]
 
