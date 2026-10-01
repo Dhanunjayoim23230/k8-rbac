@@ -29,9 +29,9 @@ metadata:
   name: default-trainee-cr
   namespace: default
 rules:
-  - apiGroup: [""] #empty means core api group v1
-    resources: ["*"] #all resources aceess allowed
-    verbs: ["get","watch","list","describe"]
+- apiGroup: [""] #empty means core api group v1
+  resources: ["*"] #all resources aceess allowed
+  verbs: ["get","watch","list","describe"]
 
 ---
 kind: ClusterRoleBinding
@@ -39,7 +39,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: default-trainee-crb
   namespace: default
-subject:
+subjects:
 - kind: User
   name: Shibhashini
   apiGroup: rbac.authorization.k8s.io
