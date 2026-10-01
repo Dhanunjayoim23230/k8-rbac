@@ -4,7 +4,7 @@ metadata:
   name: default-trainee-role
   namespace: default
 rules:
-- apiGroups: ["apps"] # indicates that core v1 api group
+- apiGroups: ["apps"] # indicates that core v1 api group  #Refer "kubectl api-resources" for group name, resource names
   resources: ["deployments"] # all objects pod, rs,dep.svc, ingress
   verbs: ["get", "watch", "list", "describe"]
 
@@ -30,7 +30,7 @@ metadata:
   namespace: default
 rules:
 - apiGroups: [""] #empty means core api group v1
-  resources: ["*"] #all resources aceess allowed
+  resources: ["nodes","persistentvolumes"] #all resources aceess allowed
   verbs: ["get","watch","list","describe"]
 
 ---
