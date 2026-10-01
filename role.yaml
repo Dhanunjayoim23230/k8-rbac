@@ -6,7 +6,7 @@ metadata:
 rules:
 - apiGroups: [""] # indicates that core v1 api group
   resources: ["pod"] # all objects pod, rs,dep.svc, ingress
-  verbs: ["get","watch","list"]
+  verbs: ["get", "watch", "list"]
 
 ---
 kind: RoleBinding
